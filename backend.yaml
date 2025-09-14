@@ -14,8 +14,8 @@
      state: present
      
   - name: create expense user
-   ansible.builtin.user:
-    name : expense
+    ansible.builtin.user:
+     name : expense
   
   - name: create app directory
     ansible.builtin.file:
