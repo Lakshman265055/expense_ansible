@@ -9,6 +9,12 @@
     ansible.vuitin.command: dnf module ensable nodejs 20 -y
      name: nodejs
      state: present
+
+  - name: install nojejs
+    ansible.builtin.package:
+     name: nodejs
+     state: present
+     
   -name: create expense user
    ansible.builtin.user:
     name : expense
