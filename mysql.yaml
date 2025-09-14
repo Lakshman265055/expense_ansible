@@ -5,12 +5,12 @@
    mysql_root_password: ExpenseApp@1
    login_host: mysql.lakshmangundapu.icu
   tasks:
-  - name: install python boto3 and botocore
+  - name: install PyMySQL
     ansible.builtin.pip:
-    name:
-    - PyMySQL
-    executable: pip3.9
-    
+     name:
+     - PyMySQL
+     executable: pip3.9
+
   - name: install MySQL server
     ansible.builtin.package:
      name: mysql-server
