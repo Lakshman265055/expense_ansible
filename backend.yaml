@@ -6,7 +6,7 @@
     ansible.vuitin.command: dnf module disable nodejs -y
 
   - name: enable default nodejs 20
-    ansible.vuitin.command: dnf module ensable nodejs 20 -y
+    ansible.vuitin.command: dnf module enable nodejs 20 -y
      name: nodejs
      state: present
 
