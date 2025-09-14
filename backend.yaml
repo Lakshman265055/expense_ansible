@@ -43,10 +43,16 @@
     ansible.builtin.command: npm install
     args:
       chdir: /app
-  - name: install PyMySQL
+  - name: copy backend service
+    ansible.builtin.copy:
+      src: backend.service
+      dest: /etc/systemd/system/backend.service
+      
+  - name: ansible to install pymysql
     ansible.builtin.pip:
      name:
      - PyMySQL
+     - cryptography
      executable: pip3.9
     
   - name: import mysql data
